@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>CASE STUDY PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+      <center>
+       <h3 style="color: red;">
+           CASE STUDY BETWEEN GOOGLE LENS AND MOBILENET 
+       </h2>
+       <br><br>
+       <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+          <p style="color: white;">1. Test Image - </p>
+          <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Emerson Quiet Kool BTU 115V</span></button>
+          <br><br>
+          <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Space Heater</span></button>
+          <br><br>
+          <img src="air.jpeg" id="airImage" style="width: 200px; border-radius: 30px;"><hr>
+      </div>
+      <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">2. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Sofa</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Day Bed</span></button>
+        <br><br>
+        <img src="bed.jpeg" id="bedImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">3. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">The Invention of Clothing</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Screen</span></button>
+        <br><br>
+        <img src="clothes.jpeg" id="clothesImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">4. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Alvina Ceiling Fan</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Monitor</span></button>
+        <br><br>
+        <img src="fan.jpeg" id="fanImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">5. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Dkristal Stella Glass</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Electric Switch</span></button>
+        <br><br>
+        <img src="glass.jpeg" id="glassImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">6. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Hanger</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Monitor</span></button>
+        <br><br>
+        <img src="hanger.jpeg" id="hangerImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">7. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Samsung Galaxy</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Hourglass</span></button>
+        <br><br>
+        <img src="phone.jpeg" id="phoneImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">8. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Bed Pillows</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Televison system</span></button>
+        <br><br>
+        <img src="pillow.jpeg" id="pillowImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">9. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Insurance</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Cup</span></button>
+        <br><br>
+        <img src="ring.jpeg" id="ringImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+    <br><br>
+      <div style="background-color: gray; border-radius: 30px; width: 90%; box-shadow:5px 5px 5px grey;"><br>
+        <p style="color: white;">10. Test Image - </p>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on GOOGLE LENS - <span style="color: purple;">Opulent Blends Liquid Soap</span></button>
+        <br><br>
+        <button class="btn btn-light" style="box-shadow:5px 5px 5px lightgray;">Output on Mobilenet Model - <span style="color: purple;">Soap Dispenser</span></button>
+        <br><br>
+        <img src="soap.jpeg" id="airImage" style="width: 200px; border-radius: 30px;"><hr>
+    </div>
+      </center>
+    </body>
+</html>
